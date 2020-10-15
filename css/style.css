@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  position: relative;
   background: #674baf url("../images/bg-mobile.svg") no-repeat top center;
   background-size: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -217,7 +216,7 @@ body {
   }
 }
 
-@media (min-width: 992px) and (min-width: 1440px) {
+@media (min-width: 1440px) {
   .heading {
     padding-top: 4.5rem;
   }

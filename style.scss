@@ -17,13 +17,11 @@ html {
 }
 
 body {
-    position: relative;
     background: $color-violet url('../images/bg-mobile.svg') no-repeat top center;
     background-size: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     min-height: 100vh;
-
 }
 
 .container {
@@ -215,10 +213,10 @@ body {
             justify-content: flex-end;
         }
     }
+}
 
-    @media (min-width: 1440px) {
-        .heading {
-            padding-top: 4.5rem;
-        }
+@media (min-width: 1440px) {
+    .heading {
+        padding-top: 4.5rem;
     }
 }
