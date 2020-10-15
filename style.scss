@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+$color-violet: hsl(257, 40%, 49%);
+$color-white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    background: $color-violet url('../images/bg-mobile.svg') no-repeat top center;
+    background-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    min-height: 100vh;
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 52rem;
+    padding: 3.2rem 3.6rem;
+}
+
+.header {
+    margin-bottom: 5.3rem;
+
+    &__logo {
+        width: 13rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.hero-image {
+    margin-bottom: 5.8rem;
+    img {
+        width: 100%;
+    }
+}
+
+.content {
+    margin-bottom: 6.3rem;
+    text-align: center;
+}
+
+.heading {
+    margin: auto;
+    max-width: 30rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: $color-white;
+}
+
+.text {
+    margin: 1.5rem 0 2.3rem;
+    line-height: 155%;
+    color: $color-white;
+}
+
+.button {
+    padding: 1.1rem;
+    min-width: 65%;
+    background-color: $color-white;
+    color: $color-violet;
+    border: 1px solid transparent;
+    border-radius: 4rem;
+    box-shadow: 0 0.4rem 0.4rem hsla(0, 0%, 0%, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: lighten($color-violet, 40%);
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $color-white;
+    }
+}
+
+.social {
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        border: 1px solid $color-white;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-white;
+            .social__icon {
+                color: $color-violet;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 1.3rem;
+        height: 1.3rem;
+        color: $color-white;
+        transition: color 0.3s;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 70%;
+    }
+
+    .header {
+        &__logo {
+            width: 21rem;
+        }
+    }
+
+    .heading {
+        max-width: 45rem;
+        font-size: 4rem;
+    }
+
+    .text {
+        margin: 1.8rem 0 2.3rem;
+        font-size: 1.8rem;
+    }
+
+    .button {
+        padding: 1.7rem 6.4rem;
+        min-width: unset;
+        font-size: 1.8rem;
+        box-shadow: 0 0.8rem 1rem hsla(0, 0%, 0%, 0.3);
+    }
+    .social {
+        &__link {
+            margin: 0 0.7rem;
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &__icon {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        background: $color-violet url('../images/bg-desktop.svg') no-repeat left center;
+        background-size: auto 100%;
+    }
+
+    .container {
+        padding: 5.5rem 7.2rem 0;
+        max-width: 144rem;
+    }
+
+    .header {
+        margin-bottom: 8rem;
+    }
+
+    .content {
+        margin-bottom: 1.8rem;
+        display: grid;
+        grid-template-columns: auto 41%;
+        gap: 5.5rem;
+        text-align: left;
+
+        .hero-image {
+            margin: 0;
+            // max-width: 71rem;
+        }
+
+        .heading {
+            margin: 0;
+        }
+
+        .text {
+            width: 97%;
+        }
+
+        .button {
+            margin: 0;
+        }
+    }
+
+    .social {
+        margin-bottom: 2rem;
+        &__list {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .heading {
+            padding-top: 4.5rem;
+        }
+    }
+}
